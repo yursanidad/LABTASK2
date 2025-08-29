@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
