@@ -16,5 +16,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+
+        public void UpdateNowServinglbl(string queueNumber)
+        {
+            lblNowS.Text = queueNumber;
+        }
     }
 }

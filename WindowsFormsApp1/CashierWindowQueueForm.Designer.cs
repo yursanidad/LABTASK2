@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listCashierQueue = new System.Windows.Forms.ListView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnNext
@@ -55,14 +57,18 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // listView1
+            // listCashierQueue
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(54, 99);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(333, 245);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listCashierQueue.HideSelection = false;
+            this.listCashierQueue.Location = new System.Drawing.Point(54, 99);
+            this.listCashierQueue.Name = "listCashierQueue";
+            this.listCashierQueue.Size = new System.Drawing.Size(333, 245);
+            this.listCashierQueue.TabIndex = 2;
+            this.listCashierQueue.UseCompatibleStateImageBehavior = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CashierWindowQueueForm
             // 
@@ -70,7 +76,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(444, 450);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listCashierQueue);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnNext);
             this.Name = "CashierWindowQueueForm";
@@ -83,6 +89,7 @@
 
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listCashierQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }
